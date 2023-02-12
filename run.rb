@@ -39,38 +39,31 @@ books = [
 #each method
 #loops through array
 def print_books
-    books.each do |b|
-        puts b
-    end
+    books.each { |b| puts b}   
 end
 
 #collect/map methods
 #returns an array
-titles = books.collect do |b|
-    b[:title]
-end
+titles = books.collect {|b| b[:title]}
+
 
 #select methods
 #filter out conditions based on conditions
-expensives = books.select do |b|
-    b[:price] > 23
-end
+expensives = books.select {|b| b[:price] > 23}
+
 
 #find methods
 #finds the first element matching the conditions
-author = books.find do |b|
-    b[:author] == "Author C"
-end
+author = books.find { |b| b[:author] == "Author C"}
+
 
 #sum
 #sums the total
-total = books.sum do |b|
-    b[:price]
-end
+total = books.sum {|b| b[:price]}
+
 
 #max
 #returns the maximum value
-best_book = books.max do |b|
-    b[:price]
-end
+best_book = books.max {|b| b[:price]}
+
  binding.pry

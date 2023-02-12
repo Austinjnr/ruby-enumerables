@@ -49,4 +49,28 @@ end
 titles = books.collect do |b|
     b[:title]
 end
+
+#select methods
+#filter out conditions based on conditions
+expensives = books.select do |b|
+    b[:price] > 23
+end
+
+#find methods
+#finds the first element matching the conditions
+author = books.find do |b|
+    b[:author] == "Author C"
+end
+
+#sum
+#sums the total
+total = books.sum do |b|
+    b[:price]
+end
+
+#max
+#returns the maximum value
+best_book = books.max do |b|
+    b[:price]
+end
  binding.pry

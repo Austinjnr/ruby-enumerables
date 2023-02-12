@@ -43,3 +43,10 @@ def print_books
         puts b
     end
 end
+
+#collect/map methods
+#returns an array
+titles = books.collect do |b|
+    b[:title]
+end
+ binding.pry
